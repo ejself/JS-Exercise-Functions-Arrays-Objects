@@ -269,6 +269,8 @@ function getModelYears(pInventory) {
 }
 console.log(getModelYears(fileInventory));
 
+
+
 /**
  * ### Challenge `getCarInfoById`
  *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
@@ -328,9 +330,22 @@ console.log(getOlderCars(fileInventory, 1990));
  * in the same order as they appear in the original inventory.
 */
 
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(pInventory) {
+  let temp = [];
+  for(let i = 0; i < pInventory.length; i++) {
+    if (pInventory[i].car_make === "Audi") {
+      temp.push(pInventory[i]);
+    } else if (pInventory[i].car_make === "Mercedes-Benz") {
+        temp.push(pInventory[i]);
+      } else if (pInventory[i].car_make === "Volkswagen") {
+        temp.push(pInventory[i]);
+      } else if (pInventory[i].car_make === "BMW") {
+        temp.push(pInventory[i]);
+      }
+    }
+  return temp;
 }
+console.log(getGermanCars(fileInventory));
 
 /**
  * ### Challenge `carMaker`
